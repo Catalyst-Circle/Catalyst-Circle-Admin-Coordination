@@ -17,7 +17,7 @@ Welcome to the GitHub repository of Catalyst-Circle-Coordination
 - [Contribute](https://github.com/Catalyst-Circle/Catalyst-Circle-Coordination/blob/main/CONTRIBUTE.md)
 - [Licence](https://github.com/Catalyst-Circle/Catalyst-Circle-Coordination/blob/main/LICENSE)
 
-[![GitHub open issues](https://img.shields.io/github/issues/Catalyst-Circle/Catalyst-Circle-Coordination?style=flat-square)](https://github.com/Catalyst-Challenges/Catalyst-Circle/Catalyst-Circle-Coordination/issues)
+[![GitHub open issues](https://img.shields.io/github/issues/Catalyst-Circle/Catalyst-Circle-Coordination?style=flat-square)](https://github.com/Catalyst-Circle/Catalyst-Circle-Coordination/issues)
 [![GitHub milestones](https://img.shields.io/github/milestones/open/Catalyst-Circle/Catalyst-Circle-Coordination?style=flat-square)](https://github.com/Catalyst-Circle/Catalyst-Circle-Coordination/milestones)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/Catalyst-Circle/Catalyst-Circle-Coordination?style=flat-square)](https://github.com/Catalyst-Circle/Catalyst-Circle-Coordination/issues?q=is%3Aissue+is%3Aclosed)
 
