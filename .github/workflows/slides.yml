@@ -1,0 +1,46 @@
+#
+# Townhall Slides, powered by imjohnbo/issue-bot
+# 
+name: Townhall slides
+on:
+  #workflow_dispatch:
+  schedule:
+  # At 00:00 on Wednesday. – https://crontab.guru
+  - cron: 0 0 * * 3
+
+jobs:
+  town_hall_slides:
+    name: Slides template
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Get template
+      uses: imjohnbo/extract-issue-template-fields@v1
+      id: extract
+      with:
+        path: .github/ISSUE_TEMPLATE/town_hall_slides.md # assignees, labels, and title defined in issue template header
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Generates and pins new town hall slides issue, closes previous, writes linking comments, assigns to next person in line, adds to organization project number 550, column name "Duties", milestone number 10
+    - name: Todays date
+      run: echo "TODAY=$(date -d '7 days' '+ %A, %dth %B, %Y')" >> $GITHUB_ENV
+    - name: New Slide issue
+      uses: imjohnbo/issue-bot@v3
+      with:
+        token: ${{ secrets.PAT }} # Built in GITHUB_TOKEN permissions are too restrictive, so a personal access token is used here
+        assignees: ${{ steps.extract.outputs.assignees }}
+        labels: ${{ steps.extract.outputs.labels }}
+        title: Town Hall Slides - ${{ env.TODAY }}
+        body: |
+          ### Townhall slides - ${{ env.TODAY }}
+          
+          * Previous Town Hall - https://github.com//Catalyst-Circle/Catalyst-Circle-Coordination/issues/{{ previousIssueNumber }}
+          * CC Admin meeting - 
+          
+          - [ ] Prepare Town Hall slides for Wednesday
+        project: 1  # The project-number from organization project https://github.com/orgs/org/projects/project-number
+        column: In progress
+        pinned: false
+        close-previous: true
+        linked-comments: true
