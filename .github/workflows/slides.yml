@@ -22,7 +22,7 @@ jobs:
       env: 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    # Generates and pins new town hall slides issue, closes previous, writes linking comments, assigns to next person in line, adds to organization project number 550, column name "Duties", milestone number 10
+    # Generates and pins new town hall slides issue, closes previous, writes linking comments, adds to project number 1, column name "In progress"
     - name: Todays date
       run: echo "TODAY=$(date -d '7 days' '+ %A, %dth %B, %Y')" >> $GITHUB_ENV
     - name: New Slide issue
@@ -39,7 +39,7 @@ jobs:
           * CC Admin meeting - 
           
           - [ ] Prepare Town Hall slides for Wednesday
-        project: 1  # The project-number from organization project https://github.com/orgs/org/projects/project-number
+        project: 1  # The project-number from https://github.com/orgs/org/projects/project-number
         column: In progress
         pinned: false
         close-previous: true
