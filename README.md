@@ -1,9 +1,9 @@
 ---
-title: Catalyst-Circle-Coordination
+title: Catalyst-Circle-Admin-Coordination
 description: 
 ---
 
-# Catalyst-Circle-Coordination
+# Catalyst-Circle-Admin-Coordination
 
 Welcome to the GitHub repository of Catalyst-Circle-Coordination
 
