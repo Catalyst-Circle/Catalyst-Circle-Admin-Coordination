@@ -39,8 +39,8 @@ jobs:
           * CC Admin meeting - 
           
           - [ ] Prepare Town Hall slides for Wednesday
-        project: 4  # The project-number from https://github.com/orgs/org/projects/project-number
+        project: 1  # The project-number from https://github.com/orgs/org/projects/project-number
         column: In progress
         pinned: false
         close-previous: true
-        linked-comments: false
+        linked-comments: true
