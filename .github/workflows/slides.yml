@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   schedule:
   # At 00:00 on Wednesday. – https://crontab.guru
-  - cron: 0 3 * * 3
+  - cron: 0 0 * * 3
 
 jobs:
   town_hall_slides:
